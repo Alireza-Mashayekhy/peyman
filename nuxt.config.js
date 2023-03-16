@@ -1,7 +1,7 @@
 export default{
   ssr: true,
   target: 'server',
-    
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: "peyman",
@@ -50,5 +50,9 @@ export default{
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+    extend(config) {
+      config.resolve.alias['node-fetch-native'] = require.resolve('node-fetch')
+    }
+  },
 };
