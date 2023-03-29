@@ -3,7 +3,7 @@
   width: 100%;
   position: fixed !important;
   background-color: rgba(0, 0, 0, 0);
-  transition: all 1s;
+  transition: background 1s;
   .enHeader {
     color: white;
     padding: 50px 260px;
@@ -13,6 +13,9 @@
     }
     .whiteLogo {
       width: 135px;
+    }
+    .barsIcon {
+      display: none;
     }
     a {
       margin-left: 50px;
@@ -49,11 +52,14 @@
     direction: rtl;
     max-height: 217px;
     * {
-      z-index: 9 !important;
+      z-index: 8 !important;
     }
     .whiteLogo {
       width: 135px;
       height: 117px;
+    }
+    .barsIcon {
+      display: none;
     }
     a {
       margin-left: 50px;
@@ -126,6 +132,232 @@
         margin-right: 16px;
         width: 24px;
         height: 24px;
+      }
+    }
+  }
+  .menu {
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    width: fit-content;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 50px 0px;
+    transition: all 1s;
+    transform: translateX(-303px);
+    display: none;
+    z-index: 9;
+    .XIcon {
+      width: 30px;
+      margin-right: 20px;
+      margin-bottom: 20px;
+    }
+    .products {
+      color: white;
+      font-size: 15px;
+      font-weight: 600;
+      text-align: center;
+      padding: 20px 100px;
+      cursor: pointer;
+      background: inherit;
+      &:hover {
+        text-decoration: none;
+        background-color: #004f8b;
+        .productsLinks {
+          display: flex;
+        }
+      }
+      .active {
+        background-color: gray;
+        &:hover {
+          text-decoration: none;
+          background-color: gray;
+        }
+      }
+      .productsLinks {
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.8);
+        width: fit-content;
+        position: fixed;
+        left: 302.98px;
+        top: 0;
+        padding: 50px 0px;
+        display: none;
+        flex-direction: column;
+      }
+    }
+    a {
+      padding: 20px 100px;
+      color: white;
+      font-size: 15px;
+      font-weight: 600;
+      height: fit-content;
+      width: 100%;
+      text-align: center;
+      &:hover {
+        text-decoration: none;
+        background-color: #004f8b;
+      }
+    }
+    .active {
+      background-color: gray;
+      &:hover {
+        text-decoration: none;
+        background-color: gray;
+      }
+    }
+  }
+  .faMenu {
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    width: fit-content;
+    position: fixed;
+    right: 0;
+    top: 0;
+    padding: 50px 0px;
+    transition: all 1s;
+    transform: translateX(303px);
+    display: none;
+    .XIcon {
+      width: 30px;
+      margin-right: 20px;
+      margin-bottom: 20px;
+    }
+    .products {
+      color: white;
+      font-size: 15px;
+      font-weight: 600;
+      text-align: center;
+      padding: 20px 100px;
+      cursor: pointer;
+      background: inherit;
+      &:hover {
+        text-decoration: none;
+        background-color: #004f8b;
+      }
+      .active {
+        background-color: gray;
+        &:hover {
+          text-decoration: none;
+          background-color: gray;
+        }
+      }
+    }
+    .productsLinks2 {
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.8);
+      width: fit-content;
+      position: fixed;
+      right: 302.98px;
+      top: 0;
+      padding: 100px 0px;
+      display: none;
+      flex-direction: column;
+      width: fit-content;
+      a {
+        width: 330px;
+      }
+    }
+    a {
+      padding: 20px 100px;
+      color: white;
+      font-size: 15px;
+      font-weight: 600;
+      height: fit-content;
+      width: 100%;
+      text-align: center;
+      &:hover {
+        text-decoration: none;
+        background-color: #004f8b;
+      }
+    }
+    .active {
+      background-color: gray;
+      &:hover {
+        text-decoration: none;
+        background-color: gray;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1679px) {
+  .header {
+    .enHeader {
+      padding: 50px 100px;
+    }
+    .faHeader {
+      padding: 50px 100px;
+    }
+  }
+}
+@media only screen and (max-width: 1384px) {
+  .header {
+    .enHeader {
+      .links {
+        display: none !important;
+      }
+      .barsIcon {
+        display: block;
+        padding-right: 130px;
+        height: fit-content;
+      }
+    }
+    .faHeader {
+      padding: 50px 100px;
+      .links {
+        display: none !important;
+      }
+      .barsIcon {
+        display: block;
+        padding-left: 130px;
+        height: fit-content;
+      }
+    }
+    .menu {
+      display: block;
+    }
+    .faMenu {
+      display: block;
+    }
+  }
+}
+@media only screen and (max-width: 750px) {
+  .header {
+    .enHeader {
+      padding: 20px;
+      // .barsIcon {
+      //   width: 18px;
+      // }
+      .whiteLogo {
+        width: 70px;
+        height: auto;
+      }
+    }
+    .faHeader {
+      padding: 20px;
+
+      .whiteLogo {
+        width: 70px;
+        height: 70px;
+      }
+      .lastHeadDiv {
+        flex-direction: column;
+        .blueLine {
+          display: none;
+        }
+        .globalIcon,
+        .bagIcon,
+        .searchIcon {
+          margin-right: 0px;
+          width: 15px;
+        }
+        .globalDiv {
+          margin: 10px 0px;
+        }
+      }
+      .barsIcon {
+        padding-left: 0px;
+        width: 18px;
       }
     }
   }

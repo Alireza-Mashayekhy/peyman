@@ -3,10 +3,12 @@
     <div class="enContactUs mont" v-if="language == 'en'">
       <Header lang="eng" @change="change" />
       <div class="topDiv d-flex">
-        <div>
+        <div class="title">
           <h3>Contact Us</h3>
           <h1>Get In Touch.</h1>
-          <Lines2 myVh="477" myVw="570" />
+          <div class="animation">
+            <Lines2 myVh="477" myVw="1900" />
+          </div>
         </div>
         <div class="informations">
           <div class="bordered d-flex align-items-center">
@@ -71,18 +73,21 @@
             <span> SEND </span>
           </button>
         </form>
-
-        <Lines myVh="550" myVw="579" />
+        <div class="animation">
+          <Lines myVh="550" myVw="1900" />
+        </div>
       </div>
       <Footer lang="en" />
     </div>
     <div class="faContactUs irancell" v-else>
       <Header lang="fa" @change="change" />
       <div class="topDiv d-flex">
-        <div>
+        <div class="title">
           <h3 class="mont">Contact Us</h3>
           <h1>با ما در تماس باشید</h1>
-          <Lines2 myVh="477" myVw="570" />
+          <div class="animation">
+            <Lines2 myVh="477" myVw="1900" />
+          </div>
         </div>
         <div class="informations">
           <div class="bordered d-flex align-items-center">
@@ -133,7 +138,9 @@
             <span> ارسال </span>
           </button>
         </form>
-        <Lines myVh="550" myVw="579" />
+        <div class="animation">
+          <Lines myVh="550" myVw="1900" />
+        </div>
       </div>
       <Footer lang="fa" />
     </div>

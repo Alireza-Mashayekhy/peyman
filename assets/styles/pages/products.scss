@@ -1,5 +1,6 @@
 .products {
   background: #0c0f1c;
+  overflow-x: hidden;
   .enProducts {
     * {
       z-index: 8;
@@ -364,6 +365,138 @@
       }
       img {
         width: 55%;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1679px) {
+  .products {
+    .enProducts {
+      .topDiv {
+        padding: 250px 100px 0px 100px;
+      }
+      .homeProduct1,
+      .homeProduct2,
+      .homeProduct3,
+      .homeProduct4 {
+        padding-left: 100px;
+      }
+    }
+    .faProducts {
+      .topDiv {
+        padding: 250px 100px 0px 100px;
+      }
+      .scroll {
+        padding: 0px 100px;
+      }
+      .homeProduct1,
+      .homeProduct2,
+      .homeProduct3,
+      .homeProduct4 {
+        padding-right: 100px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1384px) {
+  .products {
+    .enProducts {
+      .lineDiv {
+        &::before {
+          display: none;
+        }
+      }
+      .homeProduct1,
+      .homeProduct2,
+      .homeProduct3,
+      .homeProduct4 {
+        margin-bottom: 100px;
+      }
+    }
+    .faProducts {
+      .lineDiv {
+        &::before {
+          display: none;
+        }
+      }
+      .homeProduct1,
+      .homeProduct2,
+      .homeProduct3,
+      .homeProduct4 {
+        margin-bottom: 100px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 750px) {
+  .products {
+    .enProducts {
+      .topDiv {
+        padding: 170px 20px 0px 20px;
+        margin-bottom: 100px;
+        h3 {
+          font-size: 20px;
+        }
+        h1 {
+          font-size: 40px;
+          margin: 30px 0px;
+          line-height: 50px;
+        }
+        p {
+          font-size: 15px;
+        }
+      }
+      .homeProduct1,
+      .homeProduct2,
+      .homeProduct3,
+      .homeProduct4 {
+        padding-left: 20px;
+        .texts {
+          max-width: 50%;
+          h2 {
+            font-size: 40px;
+            line-height: 50px;
+          }
+          p {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+    .faProducts {
+      .topDiv {
+        padding: 170px 20px 0px 20px;
+        margin-bottom: 100px;
+        h3 {
+          font-size: 20px;
+        }
+        h1 {
+          font-size: 40px;
+          margin: 30px 0px;
+          line-height: 50px;
+        }
+        p {
+          font-size: 15px;
+        }
+      }
+      .scroll {
+        padding: 0px 20px;
+      }
+      .homeProduct1,
+      .homeProduct2,
+      .homeProduct3,
+      .homeProduct4 {
+        padding-right: 20px;
+        .texts {
+          max-width: 50%;
+          h2 {
+            font-size: 40px;
+            line-height: 50px;
+          }
+          p {
+            font-size: 12px;
+          }
+        }
       }
     }
   }

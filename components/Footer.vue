@@ -58,17 +58,19 @@
           <p>
             ایران، اراک، شهرک صنعتی قطب، خیابان همت، 4، انتهای خیابان توسعه 2
           </p>
-          <div class="d-flex flex-column">
-            <router-link to="/aboutUs">درباره ی ما</router-link>
-            <router-link to="/products">محصولات</router-link>
-          </div>
-          <div class="d-flex flex-column">
-            <router-link to="/units">واحد های تولیدی</router-link>
-            <router-link to="/news">اخبار</router-link>
-          </div>
-          <div class="d-flex flex-column">
-            <router-link to="/media">گالری</router-link>
-            <router-link to="/contactUs">تماس با ما</router-link>
+          <div class="links d-flex justify-content-between col mr-5">
+            <div class="d-flex flex-column">
+              <router-link to="/aboutUs">درباره ی ما</router-link>
+              <router-link to="/products">محصولات</router-link>
+            </div>
+            <div class="d-flex flex-column">
+              <router-link to="/units">واحد های تولیدی</router-link>
+              <router-link to="/news">اخبار</router-link>
+            </div>
+            <div class="d-flex flex-column">
+              <router-link to="/media">گالری</router-link>
+              <router-link to="/contactUs">تماس با ما</router-link>
+            </div>
           </div>
         </div>
         <div class="d-flex">

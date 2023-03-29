@@ -217,7 +217,7 @@
       </div>
       <div class="workSmarter">
         <h2 class="mont">Work smarter. React faster. Think</h2>
-        <div class="d-flex justify-content-between mb-4">
+        <div class="d-flex workTitle justify-content-between mb-4">
           <div class="d-flex align-items-center">
             <h3>چشم انداز ما</h3>
             <div class="blueLine"></div>

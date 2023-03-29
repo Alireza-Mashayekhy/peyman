@@ -93,31 +93,36 @@
         color: #ffffff;
         margin-bottom: 50px;
       }
-      .items {
-        height: 60px;
-        width: 100%;
-        .item1 {
-          width: 7.14%;
-          background: #1a1d29;
-          border-left: 1px solid #0c0f1c;
-          font-style: normal;
-          font-weight: 300;
-          font-size: 20px;
-          color: #ffffff;
-        }
-        .item2 {
-          width: 7.14%;
-          border-left: 1px solid #1a1d29;
-          font-style: normal;
-          font-weight: 300;
-          font-size: 20px;
-          color: #ffffff;
-        }
-        .except {
-          border: none;
-        }
-        .except2 {
-          border-right: 1px solid #1a1d29;
+      .allItems {
+        overflow-x: scroll;
+        .items {
+          height: 60px;
+          width: 100%;
+          .item1 {
+            width: 7.14%;
+            min-width: 80px;
+            background: #1a1d29;
+            border-left: 1px solid #0c0f1c;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 20px;
+            color: #ffffff;
+          }
+          .item2 {
+            width: 7.14%;
+            min-width: 80px;
+            border-left: 1px solid #1a1d29;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 20px;
+            color: #ffffff;
+          }
+          .except {
+            border: none;
+          }
+          .except2 {
+            border-right: 1px solid #1a1d29;
+          }
         }
       }
     }
@@ -130,6 +135,100 @@
     }
     .footer {
       margin-top: 300px;
+    }
+  }
+}
+@media only screen and (max-width: 1679px) {
+  .industrialDetail {
+    .faIndustrialDetail {
+      .topDiv {
+        padding: 250px 100px 0px 100px;
+      }
+      .imgAndText,
+      .diameter,
+      .images {
+        padding: 0px 100px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1384px) {
+  .industrialDetail {
+    .faIndustrialDetail {
+      .lineDiv {
+        &::before {
+          display: none;
+        }
+      }
+      .imgAndText {
+        flex-direction: column-reverse;
+        .text {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 750px) {
+  .industrialDetail {
+    .faIndustrialDetail {
+      .topDiv {
+        padding: 170px 20px 0px 20px;
+        margin-bottom: 100px;
+        h3 {
+          font-size: 20px;
+        }
+        h1 {
+          font-size: 25px;
+          line-height: 50px;
+        }
+        p {
+          font-size: 14px;
+        }
+      }
+      .imgAndText,
+      .diameter,
+      .images {
+        padding: 0px 20px;
+      }
+      .imgAndText {
+        img {
+          width: 100%;
+        }
+        .text {
+          font-size: 12px;
+          line-height: 30px;
+        }
+      }
+      .diameter {
+        .title {
+          font-size: 15px;
+        }
+        .allItems {
+          .items {
+            .item1,
+            .item2 {
+              span {
+                font-size: 12px;
+              }
+              img {
+                width: 12px;
+              }
+            }
+          }
+        }
+      }
+      .images {
+        flex-direction: column;
+        align-items: center;
+        img {
+          width: 100%;
+          margin-bottom: 50px;
+        }
+      }
+      .footer {
+        margin-top: 150px;
+      }
     }
   }
 }

@@ -68,3 +68,13 @@
     animation: animation 1.5s infinite;
   }
 }
+@media only screen and (max-width: 750px) {
+  .effectBtn {
+    padding: 8px 0px;
+    margin-left: 10px;
+    width: 100px;
+    span {
+      font-size: 12px !important;
+    }
+  }
+}

@@ -34,9 +34,9 @@
               <h5 class="title">{{ item.title }}</h5>
               <p class="text">{{ item.text }}</p>
             </div>
-            <button class="effectBtn">
+            <router-link to="industrial/1" class="effectBtn">
               <span>مشاهده</span>
-            </button>
+            </router-link>
           </div>
           <img :src="item.image" alt="" />
         </div>
@@ -50,9 +50,9 @@
               <h5 class="title">{{ item.title }}</h5>
               <p class="text">{{ item.text }}</p>
             </div>
-            <button class="effectBtn">
+            <router-link to="industrial/1" class="effectBtn">
               <span>مشاهده</span>
-            </button>
+            </router-link>
           </div>
         </div>
       </div>

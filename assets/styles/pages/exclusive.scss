@@ -183,3 +183,90 @@
     }
   }
 }
+@media only screen and (max-width: 1679px) {
+  .exclusive {
+    .faExclusive {
+      .topDiv {
+        padding: 250px 100px 0px 100px;
+      }
+      .scroll,
+      .formText {
+        padding: 0px 100px;
+      }
+      form {
+        margin: 0px 100px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1384px) {
+  .exclusive {
+    .faExclusive {
+      .lineDiv {
+        &::before {
+          display: none;
+        }
+      }
+      .formText {
+        margin-top: 200px;
+      }
+      form {
+        padding: 50px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 750px) {
+  .exclusive {
+    .faExclusive {
+      .topDiv {
+        padding: 170px 20px 0px 20px;
+        margin-bottom: 100px;
+        h3 {
+          font-size: 20px;
+        }
+        h1 {
+          font-size: 25px;
+          line-height: 50px;
+        }
+        p {
+          font-size: 14px;
+        }
+      }
+      .scroll,
+      .formText {
+        padding: 0px 20px;
+      }
+      form {
+        margin: 0px 20px;
+        padding: 20px;
+        input {
+          width: 100%;
+          font-size: 12px;
+          padding-bottom: 40px;
+          margin-bottom: 40px;
+        }
+        textarea {
+          font-size: 12px;
+        }
+        .el-upload {
+          .el-upload-dragger {
+            .el-upload__text {
+              font-size: 12px;
+              img {
+                width: 20px;
+              }
+            }
+          }
+        }
+        .size {
+          font-size: 12px;
+        }
+      }
+      .formText {
+        font-size: 14px;
+        line-height: 40px;
+      }
+    }
+  }
+}

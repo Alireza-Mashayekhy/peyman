@@ -2,7 +2,6 @@
   background: #0c0f1c;
   .enAboutUs {
     overflow: hidden;
-
     * {
       z-index: 8;
       position: relative;
@@ -11,7 +10,17 @@
       padding: 0px 260px;
       margin-bottom: 400px;
       padding-top: 250px;
-
+      .title {
+        margin-right: 20px;
+        max-width: 50%;
+        .myLines {
+          overflow: hidden;
+          width: 100%;
+        }
+      }
+      .text {
+        min-width: 615px;
+      }
       &::before {
         content: "";
         width: 864px;
@@ -93,7 +102,15 @@
         width: 645px;
       }
     }
+    .capabilities {
+      img {
+        margin-left: 50px;
+      }
+    }
     .activities {
+      img {
+        margin-right: 50px;
+      }
       &::before {
         content: "";
         width: 744px;
@@ -160,6 +177,7 @@
         }
         .item2 {
           margin-top: 150px;
+          margin-left: 20px;
         }
       }
     }
@@ -177,7 +195,17 @@
       padding: 0px 260px;
       margin-bottom: 400px;
       padding-top: 250px;
-
+      .title {
+        margin-left: 20px;
+        max-width: 50%;
+        .myLines {
+          overflow: hidden;
+          width: 100%;
+        }
+      }
+      .text {
+        min-width: 615px;
+      }
       &::before {
         content: "";
         width: 864px;
@@ -260,6 +288,9 @@
       }
     }
     .activities {
+      img {
+        margin-left: 20px;
+      }
       &::before {
         content: "";
         width: 744px;
@@ -272,6 +303,11 @@
         background: #3b4d8d;
         opacity: 0.7;
         filter: blur(150px);
+      }
+    }
+    .capabilities {
+      img {
+        margin-right: 20px;
       }
     }
     .visions {
@@ -376,12 +412,283 @@
       .images {
         padding: 0px 230px;
         margin-bottom: 400px;
+        max-width: 100%;
         & > img {
           width: 24px;
           cursor: pointer;
         }
         .image {
-          width: 311px;
+          width: 23%;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1679px) {
+  .aboutUs {
+    .enAboutUs {
+      .topDiv {
+        padding: 250px 100px 0px 100px;
+      }
+      .capabilities,
+      .activities,
+      .visions {
+        padding: 0px 100px;
+      }
+    }
+    .faAboutUs {
+      .topDiv {
+        padding: 250px 100px 0px 100px;
+      }
+      .capabilities,
+      .activities,
+      .visions {
+        padding: 0px 100px;
+      }
+      .certificates {
+        .padd,
+        .images {
+          padding: 0px 100px;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1384px) {
+  .aboutUs {
+    .enAboutUs {
+      .topDiv {
+        flex-direction: column;
+        .title {
+          margin-bottom: 50px;
+          max-width: 100%;
+
+          .myLines {
+            width: 100%;
+          }
+        }
+        .text {
+          min-width: 100%;
+          p {
+            min-width: 100%;
+          }
+        }
+      }
+      .capabilities,
+      .activities {
+        flex-direction: column;
+        & > div {
+          margin-bottom: 50px;
+          max-width: 100%;
+          width: 100%;
+        }
+        img {
+          margin: 0px;
+          width: 100%;
+        }
+      }
+      .activities {
+        flex-direction: column-reverse;
+      }
+      .visions {
+        .items {
+          & > div {
+            flex-wrap: wrap;
+          }
+          .item {
+            width: 100%;
+            margin-top: 70px;
+          }
+          .item2 {
+            margin-top: 0px;
+            margin-left: 0px;
+          }
+        }
+      }
+    }
+    .faAboutUs {
+      .topDiv {
+        flex-direction: column;
+        .title {
+          margin-bottom: 50px;
+          max-width: 100%;
+
+          .myLines {
+            width: 100%;
+          }
+        }
+        .text {
+          min-width: 100%;
+          p {
+            min-width: 100%;
+          }
+        }
+      }
+      .capabilities,
+      .activities {
+        flex-direction: column;
+        & > div {
+          margin-bottom: 50px;
+          max-width: 100%;
+          width: 100%;
+        }
+        img {
+          margin: 0px;
+          width: 100%;
+        }
+      }
+      .activities {
+        flex-direction: column-reverse;
+      }
+      .visions {
+        .visionHeader {
+          flex-direction: column;
+          h4,
+          h2 {
+            width: 100%;
+          }
+          h2 {
+            text-align: left;
+          }
+        }
+        .items {
+          & > div {
+            flex-wrap: wrap;
+          }
+          .item {
+            width: 100%;
+            margin-top: 70px;
+          }
+          .item2 {
+            margin-top: 0px;
+            margin-left: 0px;
+          }
+        }
+      }
+      .certificateHeader {
+        flex-direction: column;
+        h3 {
+          width: 100%;
+          text-align: right;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 750px) {
+  .aboutUs {
+    .enAboutUs {
+      .topDiv {
+        padding: 170px 20px 0px 20px;
+        margin-bottom: 200px;
+
+        .title {
+          h2 {
+            font-size: 20px;
+            margin-bottom: 20px;
+          }
+          h1 {
+            font-size: 40px;
+            margin-bottom: 50px;
+          }
+        }
+        .text {
+          h4 {
+            font-size: 20px;
+          }
+          p {
+            font-size: 12px;
+          }
+        }
+      }
+      .capabilities,
+      .activities,
+      .visions {
+        padding: 0px 20px;
+        margin-bottom: 200px;
+        h2 {
+          font-size: 40px !important;
+        }
+        span,
+        p {
+          font-size: 12px !important;
+        }
+      }
+      .visions {
+        .items {
+          .item {
+            img {
+              height: 70px;
+            }
+            h3 {
+              font-size: 20px;
+              min-width: 100%;
+            }
+          }
+        }
+      }
+    }
+    .faAboutUs {
+      .topDiv {
+        padding: 170px 20px 0px 20px;
+        margin-bottom: 200px;
+        .title {
+          h2 {
+            font-size: 20px;
+            margin-bottom: 20px;
+          }
+          h1 {
+            font-size: 40px;
+            margin-bottom: 50px;
+          }
+        }
+        .text {
+          h4 {
+            font-size: 20px;
+          }
+          p {
+            font-size: 12px;
+          }
+        }
+      }
+      .capabilities,
+      .activities,
+      .visions {
+        padding: 0px 20px;
+        margin-bottom: 200px;
+        h2 {
+          font-size: 40px !important;
+        }
+        span,
+        p {
+          font-size: 12px !important;
+        }
+      }
+      .visions {
+        .items {
+          .item {
+            img {
+              height: 70px;
+            }
+            h3 {
+              font-size: 20px;
+              min-width: 100%;
+            }
+          }
+        }
+      }
+      .certificates {
+        margin-bottom: 0px;
+        h2,
+        h3 {
+          font-size: 40px;
+        }
+        p {
+          font-size: 12px;
+        }
+        .padd,
+        .images {
+          padding: 0px 20px;
         }
       }
     }

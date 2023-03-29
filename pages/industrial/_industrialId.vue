@@ -24,43 +24,45 @@
       </div>
       <div class="diameter">
         <div class="title">قطر میلگردها</div>
-        <div class="d-flex items mont">
-          <div
-            class="item1 d-flex justify-content-center align-items-center"
-            v-for="item in items"
-            :key="item"
-            :class="{ except: item == 22 }"
-          >
-            <span>
-              {{ item }}
-            </span>
-            <img src="/icons/lineCircle.svg" alt="" />
+        <div class="allItems">
+          <div class="d-flex items mont">
+            <div
+              class="item1 d-flex justify-content-center align-items-center"
+              v-for="item in items"
+              :key="item"
+              :class="{ except: item == 22 }"
+            >
+              <span>
+                {{ item }}
+              </span>
+              <img src="/icons/lineCircle.svg" alt="" />
+            </div>
           </div>
-        </div>
-        <div class="d-flex items mont">
-          <div
-            class="item2 d-flex justify-content-center align-items-center"
-            v-for="item in items"
-            :key="item"
-            :class="{ except2: item == 4 }"
-          >
-            <span>
-              {{ item }}
-            </span>
-            <img src="/icons/lineCircle.svg" alt="" />
+          <div class="d-flex items mont">
+            <div
+              class="item2 d-flex justify-content-center align-items-center"
+              v-for="item in items"
+              :key="item"
+              :class="{ except2: item == 4 }"
+            >
+              <span>
+                {{ item }}
+              </span>
+              <img src="/icons/lineCircle.svg" alt="" />
+            </div>
           </div>
-        </div>
-        <div class="d-flex items mont">
-          <div
-            class="item1 d-flex justify-content-center align-items-center"
-            v-for="item in items"
-            :key="item"
-            :class="{ except: item == 22 }"
-          >
-            <span>
-              {{ item }}
-            </span>
-            <img src="/icons/lineCircle.svg" alt="" />
+          <div class="d-flex items mont">
+            <div
+              class="item1 d-flex justify-content-center align-items-center"
+              v-for="item in items"
+              :key="item"
+              :class="{ except: item == 22 }"
+            >
+              <span>
+                {{ item }}
+              </span>
+              <img src="/icons/lineCircle.svg" alt="" />
+            </div>
           </div>
         </div>
       </div>

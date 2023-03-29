@@ -115,8 +115,14 @@
           color: #ffffff;
         }
       }
-      button {
+      a {
         margin-right: 10px;
+        &:hover {
+          text-decoration: none;
+        }
+        span {
+          color: black;
+        }
       }
       img {
         width: 600px;
@@ -132,6 +138,102 @@
     }
     .footer {
       margin-top: 300px;
+    }
+  }
+}
+@media only screen and (max-width: 1679px) {
+  .industrial {
+    .faIndustrial {
+      .topDiv {
+        padding: 250px 100px 0px 100px;
+      }
+      .scroll,
+      .item1,
+      .item2 {
+        padding: 0px 100px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1384px) {
+  .industrial {
+    .faIndustrial {
+      .lineDiv {
+        &::before {
+          display: none;
+        }
+      }
+      .item1 {
+        flex-direction: column;
+        & > div {
+          width: 100%;
+          .titleAndText {
+            .text {
+              max-width: 100%;
+            }
+          }
+          img {
+            position: relative;
+            bottom: 100px;
+          }
+        }
+      }
+      .item2 {
+        flex-direction: column-reverse;
+        & > div {
+          width: 100%;
+          .titleAndText {
+            .text {
+              max-width: 100%;
+            }
+          }
+          img {
+            position: relative;
+            bottom: 100px;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 750px) {
+  .industrial {
+    .faIndustrial {
+      .topDiv {
+        padding: 170px 20px 0px 20px;
+        margin-bottom: 100px;
+        h3 {
+          font-size: 20px;
+        }
+        h1 {
+          font-size: 25px;
+          line-height: 50px;
+        }
+        p {
+          font-size: 14px;
+        }
+      }
+      .scroll,
+      .item1,
+      .item2 {
+        padding: 0px 20px;
+        .titleAndText {
+          .title {
+            font-size: 20px;
+            margin-bottom: 20px;
+          }
+          .text {
+            font-size: 13px;
+          }
+        }
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+      .footer {
+        margin-top: 150px;
+      }
     }
   }
 }

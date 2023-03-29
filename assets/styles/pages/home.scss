@@ -3,6 +3,7 @@
   background: url("/images/homeBackground.jpg"), #0c0f1c;
   background-repeat: no-repeat;
   background-size: contain;
+  overflow-x: hidden;
   .enHome {
     * {
       z-index: 8;
@@ -935,6 +936,461 @@
             z-index: -1;
             background: rgba(255, 255, 255, 0.47);
             filter: blur(200px);
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1679px) {
+  .home {
+    .enHome {
+      .topDiv {
+        padding: 250px 100px 0px 100px;
+      }
+      .homeProduct1,
+      .homeProduct2,
+      .homeProduct3,
+      .homeProduct4 {
+        padding-left: 100px;
+      }
+      .units,
+      .news,
+      .workSmarter,
+      .whoWeAre {
+        padding: 0px 100px;
+      }
+    }
+    .faHome {
+      .topDiv {
+        padding: 250px 100px 0px 100px;
+      }
+      .homeProduct1,
+      .homeProduct2,
+      .homeProduct3,
+      .whoWeAre {
+        padding-right: 100px;
+      }
+      .units,
+      .news,
+      .workSmarter {
+        padding: 0px 100px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1384px) {
+  .home {
+    .enHome {
+      .whoWeAre {
+        flex-direction: column;
+        height: 1212px;
+        .texts {
+          width: 100%;
+        }
+        .animation {
+          display: flex;
+          justify-content: center;
+          margin-top: 30px;
+          overflow: hidden;
+          &::before {
+            display: none;
+          }
+        }
+      }
+      .workSmarter {
+        .workTitle {
+          flex-direction: column-reverse;
+          h3 {
+            margin-top: 20px;
+          }
+        }
+        .icons {
+          flex-wrap: wrap;
+          .iconsDiv {
+            width: 50%;
+            max-width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 50px;
+            div {
+              text-align: center;
+            }
+          }
+        }
+      }
+      .homeProduct1,
+      .homeProduct2,
+      .homeProduct3 {
+        .texts {
+          margin-left: 20px;
+        }
+      }
+      .units {
+        margin-top: 100px;
+        .unitsHead {
+          & > div {
+            flex-direction: column;
+            h2 {
+              max-width: 100%;
+              min-width: 100%;
+            }
+            & > div {
+              width: 100%;
+            }
+          }
+        }
+        .items {
+          .item {
+            width: 100%;
+          }
+          .marginItem {
+            margin-top: 0px;
+          }
+        }
+      }
+      .news {
+        .newsHead {
+          & > div {
+            flex-direction: column;
+          }
+          .enNew {
+            p {
+              text-align: left;
+            }
+          }
+        }
+        .newsList {
+          .new {
+            flex-direction: column-reverse;
+            align-items: center;
+            & > div {
+              width: 60%;
+            }
+            img {
+              width: 550px;
+              height: 450px;
+            }
+          }
+        }
+      }
+    }
+    .faHome {
+      .whoWeAre {
+        flex-direction: column;
+        height: 1212px;
+        .texts {
+          width: 100%;
+        }
+        .animation {
+          display: flex;
+          justify-content: center;
+          margin-top: 30px;
+          overflow: hidden;
+          &::before {
+            display: none;
+          }
+        }
+      }
+      .workSmarter {
+        .workTitle {
+          flex-direction: column-reverse;
+          h3 {
+            margin-top: 20px;
+          }
+        }
+        .icons {
+          flex-wrap: wrap;
+          .iconsDiv {
+            width: 50%;
+            max-width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 50px;
+          }
+        }
+      }
+      .homeProduct1,
+      .homeProduct2,
+      .homeProduct3 {
+        .texts {
+          margin-left: 20px;
+        }
+      }
+      .units {
+        margin-top: 100px;
+        .unitsHead {
+          & > div {
+            flex-direction: column;
+            h2 {
+              max-width: 100%;
+              min-width: 100%;
+            }
+            & > div {
+              width: 100%;
+            }
+          }
+        }
+        .items {
+          .item {
+            width: 100%;
+          }
+          .marginItem {
+            margin-top: 0px;
+          }
+        }
+      }
+      .news {
+        .newsHead {
+          & > div {
+            flex-direction: column;
+          }
+          .enNew {
+            p {
+              text-align: left;
+            }
+          }
+        }
+        .newsList {
+          .new {
+            flex-direction: column-reverse;
+            align-items: center;
+            img {
+              width: 550px;
+              height: 450px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 750px) {
+  .home {
+    .enHome {
+      .topDiv {
+        padding: 170px 20px 0px 20px;
+        h3 {
+          font-size: 20px;
+        }
+        h1 {
+          font-size: 40px;
+          max-width: 90%;
+          line-height: 70px;
+        }
+      }
+      .whoWeAre {
+        padding: 0px 20px;
+        margin-bottom: 0px;
+        .texts {
+          padding-left: 0px;
+          h1,
+          h2 {
+            font-size: 40px;
+          }
+          p {
+            font-size: 12px;
+          }
+        }
+      }
+      .workSmarter {
+        padding: 0px 20px;
+        h2,
+        h3 {
+          font-size: 40px;
+        }
+        p,
+        div {
+          font-size: 12px;
+        }
+        .icons {
+          img {
+            height: 60px;
+          }
+        }
+      }
+      .homeProduct1,
+      .homeProduct2,
+      .homeProduct3,
+      .homeProduct4 {
+        padding-left: 20px;
+        margin-bottom: 50px;
+        .texts {
+          h2 {
+            font-size: 40px;
+            line-height: 50px;
+          }
+          p {
+            font-size: 12px;
+          }
+        }
+      }
+      .units {
+        padding: 0px 20px;
+        .unitsHead {
+          h2 {
+            font-size: 40px;
+            line-height: 60px;
+          }
+        }
+        .items {
+          .item {
+            .number {
+              font-size: 200px;
+            }
+            .title {
+              font-size: 20px;
+            }
+            .text {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+      .animationImage {
+        .video {
+          height: 50vh;
+        }
+      }
+      .news {
+        padding: 0px 20px;
+        .newsHead {
+          .faNew {
+            h3 {
+              font-size: 40px;
+            }
+            p {
+              font-size: 12px;
+            }
+          }
+          .enNew {
+            h2,
+            p {
+              font-size: 40px;
+            }
+          }
+        }
+        .newsList {
+          .new {
+            div,
+            img {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+    .faHome {
+      .topDiv {
+        padding: 170px 20px 0px 20px;
+        h3 {
+          font-size: 20px;
+        }
+        h1 {
+          font-size: 40px;
+          max-width: 90%;
+          line-height: 70px;
+        }
+      }
+      .whoWeAre {
+        padding: 0px 20px;
+        .texts {
+          padding-left: 0px;
+          h1,
+          h2 {
+            font-size: 40px;
+          }
+          p {
+            font-size: 12px;
+          }
+        }
+      }
+      .workSmarter {
+        padding: 0px 20px;
+        h2,
+        h3 {
+          font-size: 40px;
+        }
+        p,
+        div {
+          font-size: 12px;
+        }
+        .icons {
+          img {
+            height: 60px;
+          }
+        }
+      }
+      .homeProduct1,
+      .homeProduct2,
+      .homeProduct3 {
+        padding-right: 20px;
+        margin-bottom: 50px;
+        .texts {
+          h2 {
+            font-size: 40px;
+            line-height: 50px;
+          }
+          p {
+            font-size: 12px;
+          }
+        }
+      }
+      .units {
+        padding: 0px 20px;
+        .unitsHead {
+          & > div {
+            h2,
+            h3 {
+              font-size: 40px;
+            }
+          }
+        }
+        .items {
+          .item {
+            .number {
+              font-size: 200px;
+            }
+            .title {
+              font-size: 20px;
+            }
+            .text {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+      .animationImage {
+        .video {
+          height: 50vh;
+        }
+      }
+      .news {
+        padding: 0px 20px;
+        .newsHead {
+          .faNew {
+            h3 {
+              font-size: 40px;
+            }
+            p {
+              font-size: 12px;
+            }
+          }
+          .enNew {
+            h2,
+            p {
+              font-size: 40px;
+            }
+          }
+        }
+        .newsList {
+          .new {
+            div,
+            img {
+              width: 100%;
+            }
           }
         }
       }

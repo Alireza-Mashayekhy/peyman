@@ -279,8 +279,9 @@ export default {
       var dur = 0.5,
         next = 16,
         dur = 14,
-        tt = 10000;
+        tt = document.body.clientHeight;
 
+      console.log(document.body.clientHeight);
       var action = gsap
         .timeline({
           defaults: {

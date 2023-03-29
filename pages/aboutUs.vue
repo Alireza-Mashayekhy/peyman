@@ -3,14 +3,14 @@
     <div class="enAboutUs mont" v-if="language == 'en'">
       <Header lang="eng" @change="change" />
       <div class="topDiv d-flex justify-content-between">
-        <div>
+        <div class="title">
           <h2>About Us</h2>
           <h1>Who We Are?</h1>
           <div class="myLines">
-            <Lines myVw="550" myVh="110" />
+            <Lines myVw="1920" myVh="110" />
           </div>
         </div>
-        <div>
+        <div class="text">
           <h4>History</h4>
           <p>
             In 2016, Peyman Profile Asia Company started its activities with
@@ -170,14 +170,14 @@
     <div class="faAboutUs irancell" v-else>
       <Header lang="fa" @change="change" />
       <div class="topDiv d-flex justify-content-between">
-        <div>
+        <div class="title">
           <h2 class="mont">About Us</h2>
           <h1>درباره ی ما</h1>
           <div class="myLines">
-            <Lines myVw="550" myVh="110" />
+            <Lines myVw="1920" myVh="110" />
           </div>
         </div>
-        <div>
+        <div class="text">
           <h4>تاریخچه</h4>
           <p>
             شرکت پیمان پروفیل آسیا در سال 1395 با تحقیق در زمینه صنایع
@@ -271,7 +271,9 @@
         </div>
       </div>
       <div class="visions">
-        <div class="d-flex justify-content-between align-items-center">
+        <div
+          class="visionHeader d-flex justify-content-between align-items-center"
+        >
           <h4>چشم انداز ما<span class="blueLine"></span></h4>
           <h2 class="mont">Our Visions</h2>
         </div>
@@ -319,7 +321,9 @@
         </div>
       </div>
       <div class="certificates">
-        <div class="padd d-flex justify-content-between align-items-end">
+        <div
+          class="padd certificateHeader d-flex justify-content-between align-items-end"
+        >
           <h3>گواهینامه ها <span class="blueLine"></span></h3>
           <h2 class="mont">Certificates</h2>
         </div>
