@@ -9,6 +9,8 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@splidejs/splide": "^4.1.4",
+    "@splidejs/vue-splide": "^0.3.5",
     "aos": "^3.0.0-beta.6",
     "bootstrap": "^4.6.2",
     "bootstrap-vue": "^2.22.0",
@@ -20,8 +22,10 @@
     "postcss": "^8.4.21",
     "sass": "^1.58.0",
     "sass-loader": "^10.4.1",
+    "slick-carousel": "^1.8.1",
     "vue": "^2.7.10",
     "vue-server-renderer": "^2.7.10",
+    "vue-slick-carousel": "^1.0.6",
     "vue-template-compiler": "^2.7.10",
     "webpack": "^4.45.0"
   },

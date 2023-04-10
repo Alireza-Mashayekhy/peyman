@@ -141,6 +141,13 @@
         }
       }
     }
+    .homeProduct1,
+    .homeProduct2,
+    .homeProduct3,
+    .homeProduct4 {
+      height: 100vh;
+      background: #0c0f1c;
+    }
     .homeProduct1 {
       padding-left: 260px;
       .texts {
@@ -230,8 +237,7 @@
     }
     .homeProduct4 {
       padding-left: 260px;
-      margin-top: 200px;
-      margin-bottom: 420px;
+
       .texts {
         h2 {
           font-weight: 700;
@@ -361,7 +367,10 @@
       }
     }
     .animationImage {
-      height: 1080px;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       #trigger {
         width: 333px;
         height: 288px;
@@ -370,12 +379,12 @@
       .video {
         height: 100vh;
         position: relative;
-        top: 450px;
+        top: 750px;
       }
     }
     .news {
       padding: 0px 260px;
-      margin-top: 600px;
+      margin-top: 900px;
       .newsHead {
         h2 {
           font-weight: 700;
@@ -715,6 +724,13 @@
         width: 45%;
       }
     }
+    .homeProduct1,
+    .homeProduct2,
+    .homeProduct3 {
+      height: 100vh;
+      background: #0c0f1c;
+    }
+
     .units {
       padding: 0px 260px;
       overflow: hidden;
@@ -830,7 +846,10 @@
       }
     }
     .animationImage {
-      height: 1080px;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       #trigger {
         width: 333px;
         height: 288px;
@@ -839,12 +858,12 @@
       .video {
         height: 100vh;
         position: relative;
-        top: 450px;
+        top: 750px;
       }
     }
     .news {
       padding: 0px 260px;
-      margin-top: 600px;
+      margin-top: 900px;
       .newsHead {
         .faNew {
           .blueLine {

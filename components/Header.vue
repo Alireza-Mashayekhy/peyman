@@ -59,9 +59,8 @@
           درباره ی ما
         </router-link>
         <div class="productsLinks">
-          <div :class="{ active: page == 3 }">محصولات</div>
-          <router-link to="/products" class="underLink">
-            محصولات تولیدی
+          <router-link to="/products" :class="{ active: page == 3 }">
+            محصولات
           </router-link>
           <router-link to="/industrial" class="underLink">
             محصولات صنعتی
@@ -189,15 +188,41 @@ export default {
   },
   methods: {
     change() {
-      this.$emit("change");
+      if (this.$route.path == "/units") {
+        this.$router.push("enUnits");
+        this.$emit("change");
+      } else if (this.$route.path == "/enUnits") {
+        this.$router.push("units");
+        this.$emit("change");
+      } else if (this.$route.path == "/") {
+        this.$router.push("enHome");
+        this.$emit("change");
+      } else if (this.$route.path == "/enHome") {
+        this.$router.push("/");
+        this.$emit("change");
+      } else {
+        this.$emit("change");
+      }
     },
     handleScroll() {
       if (window.scrollY == 0) {
         document.getElementsByClassName("header")[0].style.backgroundColor =
           "rgba(0, 0, 0, 0)";
+        document
+          .getElementsByClassName("header")[0]
+          .getElementsByClassName("whiteLogo")[0].style.height = "117px";
+        document
+          .getElementsByClassName("header")[0]
+          .getElementsByClassName("whiteLogo")[0].style.width = "135px";
       } else {
         document.getElementsByClassName("header")[0].style.backgroundColor =
           "rgba(0, 0, 0, 0.5)";
+        document
+          .getElementsByClassName("header")[0]
+          .getElementsByClassName("whiteLogo")[0].style.height = "60px";
+        document
+          .getElementsByClassName("header")[0]
+          .getElementsByClassName("whiteLogo")[0].style.width = "70px";
       }
     },
     showMenu() {
@@ -241,9 +266,21 @@ export default {
     if (window.scrollY == 0) {
       document.getElementsByClassName("header")[0].style.backgroundColor =
         "rgba(0, 0, 0, 0)";
+      document
+        .getElementsByClassName("header")[0]
+        .getElementsByClassName("whiteLogo")[0].style.height = "117px";
+      document
+        .getElementsByClassName("header")[0]
+        .getElementsByClassName("whiteLogo")[0].style.width = "135px";
     } else {
       document.getElementsByClassName("header")[0].style.backgroundColor =
         "rgba(0, 0, 0, 0.5)";
+      document
+        .getElementsByClassName("header")[0]
+        .getElementsByClassName("whiteLogo")[0].style.height = "60px";
+      document
+        .getElementsByClassName("header")[0]
+        .getElementsByClassName("whiteLogo")[0].style.width = "70px";
     }
     if (this.$route.path == "/") {
       this.page = 1;

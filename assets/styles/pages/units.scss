@@ -69,11 +69,13 @@
       .unit {
         padding: 200px 260px;
         background: #0c0f1c;
+        height: 100vh;
         width: 100%;
         img {
           width: 50%;
           height: auto;
           margin-left: 20px;
+          max-height: 100%;
         }
         h2 {
           max-width: 530px;
@@ -216,6 +218,7 @@
         img {
           width: 50%;
           height: auto;
+          max-height: 100vh;
         }
         h2 {
           max-width: 530px;
@@ -299,6 +302,7 @@
         .unit {
           flex-direction: column;
           padding: 50px 100px;
+          overflow: hidden;
           & > div {
             width: 100%;
           }
@@ -313,6 +317,9 @@
           p {
             max-width: 100%;
           }
+          img {
+            max-height: 50vh;
+          }
         }
       }
     }
@@ -321,6 +328,7 @@
         .unit {
           flex-direction: column;
           padding: 50px 100px;
+          overflow: hidden;
           h2 {
             display: flex;
             max-width: 100%;
@@ -331,6 +339,9 @@
           }
           p {
             max-width: 100%;
+          }
+          img {
+            max-height: 50vh;
           }
         }
       }
@@ -378,6 +389,9 @@
           a {
             font-size: 12px;
           }
+          img {
+            max-height: 100%;
+          }
         }
       }
     }
@@ -419,6 +433,9 @@
           }
           a {
             font-size: 12px;
+          }
+          img {
+            max-height: 100%;
           }
         }
       }

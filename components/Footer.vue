@@ -6,7 +6,7 @@
         <div class="d-flex align-items-center">
           <div class="email d-flex">
             <img src="/icons/sms.svg" alt="" />
-            <div>info@peymanprofile.com</div>
+            <a href="mailto:info@peymanprofile.com"> info@peymanprofile.com </a>
           </div>
           <div class="col line"></div>
         </div>
@@ -49,7 +49,9 @@
         <div class="d-flex align-items-center">
           <div class="col line"></div>
           <div class="email d-flex">
-            <div class="mont">info@peymanprofile.com</div>
+            <a href="mailto:info@peymanprofile.com" class="mont">
+              info@peymanprofile.com
+            </a>
             <img src="/icons/sms.svg" alt="" />
           </div>
         </div>

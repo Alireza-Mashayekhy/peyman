@@ -1,36 +1,35 @@
 <template>
   <div class="home">
-    <div class="faHome irancell">
-      <Header lang="fa" @change="change" />
+    <div class="enHome mont">
+      <Header lang="eng" @change="change" />
       <div class="topDiv">
-        <h3 class="mont">Peyman Profile Asia Co</h3>
-        <h1>تولید کننده محصولات آلومینیومی با پیشرفته ترین تجهیزات</h1>
+        <h3>Peyman Profile Asia Co</h3>
+        <h1>
+          Manufacturer of aluminum products with the most advanced equipment
+        </h1>
         <button class="effectBtn">
           <img src="/icons/blackCall.svg" class="blackCallIcon" />
-          <span>تماس با ما</span>
+          <span>Get In Touch</span>
         </button>
         <div class="scroll d-flex justify-content-end align-items-center">
+          <span class="scrollTitle">Scroll Down</span>
           <div class="scrollIcon">
             <span class="scrollCircle"></span>
           </div>
-          <span class="scrollTitle">Scroll Down</span>
         </div>
       </div>
       <div class="whoWeAre d-flex justify-content-between align-items-center">
         <div class="texts">
-          <h1 class="mont">Who We Are?</h1>
-          <div class="mb-4 d-flex justify-content-between align-items-center">
-            <h2>درباره ی ما</h2>
-            <div class="blueLine"></div>
-          </div>
+          <h1>Who We Are?</h1>
           <p>
-            شرکت پیمان پروفیل آسیا در سال 1395 با تحقیق در زمینه صنعت آلومینیوم
-            و نظارت بر نیاز بازار و ساخت سه سالن و با گذشت زمان و ارتقاء مجموعه
-            به هفت سالن و تجهیز آنها به پیشرفته ترین ابزار تولید آغاز به کار
-            کرد. محصولات آلومینیومی ...
+            Peyman Profile Asia Company started its activity in 2016 with
+            research in the field of aluminum industry, monitoring market needs
+            and building three halls, and with the passage of time and upgrading
+            the complex to seven halls and equipping them with the most advanced
+            tools for the production of aluminum products ...
           </p>
           <button class="effectBtn">
-            <span>بیشتر بخوانید</span>
+            <span>Read More</span>
           </button>
         </div>
         <div class="col animation">
@@ -38,31 +37,27 @@
         </div>
       </div>
       <div class="workSmarter">
-        <h2 class="mont">Work smarter. React faster. Think</h2>
-        <div class="d-flex workTitle justify-content-between mb-4">
-          <div class="d-flex align-items-center">
-            <h3>چشم انداز ما</h3>
-            <div class="blueLine"></div>
-          </div>
-          <h2 class="mont">.bigger</h2>
-        </div>
-        <p>اهداف و برنامه های آتی این شرکت بر اساس سیاست های زیر است :</p>
+        <h2>Work smarter. React faster. Think bigger.</h2>
+        <p>
+          The goals and future plans of this company are based on the following
+          policies :
+        </p>
         <div class="d-flex justify-content-between icons">
           <div class="iconsDiv">
             <img src="/icons/smarterIcon1.svg" alt="" />
-            <div>تجهیز و به روز رسانی ماشین آلات</div>
+            <div>Equipping and updating machines</div>
           </div>
           <div class="iconsDiv">
             <img src="/icons/smarterIcon2.svg" alt="" />
-            <div>ارتقاء مداوم دانش فنی</div>
+            <div>Promotion of technical knowledge</div>
           </div>
           <div class="iconsDiv">
             <img src="/icons/smarterIcon3.svg" alt="" />
-            <div>شناخت بازار این صنعت</div>
+            <div>Knowing the market of this industry</div>
           </div>
           <div class="iconsDiv">
             <img src="/icons/smarterIcon4.svg" alt="" />
-            <div>کسب استانداردهای نوین</div>
+            <div>New standards of aluminum industry</div>
           </div>
         </div>
       </div>
@@ -71,72 +66,78 @@
           class="homeProduct1 d-flex align-items-center justify-content-between"
         >
           <div class="texts">
-            <h2>محصولات صنعتی<span>.</span></h2>
+            <h2>Exclusive products<span>.</span></h2>
             <p>
-              آلومینیوم با رنگ نقره‌ای و وزن مخصوص پایین، کاربرد بسیار بالایی در
-              صنایع دارد.که بر اساس ویژگی‌های مختلف محصولات و نوع کاربرد آن‌ها
-              می‌توان ...
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna
             </p>
             <button class="effectBtn">
-              <span>اطلاعات بیشتر</span>
+              <span> More Info </span>
             </button>
           </div>
-          <img src="/images/faHomeProduct1.png" alt="" />
+          <img src="/images/homeProduct1.png" alt="" />
         </section>
         <section
           class="homeProduct2 d-flex align-items-center justify-content-between"
         >
           <div class="texts">
-            <h2>محصولات ساختمانی<span>.</span></h2>
+            <h2>General products<span>.</span></h2>
             <p>
-              امروزه یکی از متنوع‌ترین و پرکاربردةرین قطعات آلومینیوم در صنعت
-              ساختمان می‌باشد.این عنصر به علت مقاومت در برابر خوردگی و اکسید
-              شدن...
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna
             </p>
             <button class="effectBtn">
-              <span>اطلاعات بیشتر</span>
+              <span> More Info </span>
             </button>
           </div>
-          <img src="/images/faHomeProduct2.png" alt="" />
+          <img src="/images/homeProduct2.png" alt="" />
         </section>
         <section
           class="homeProduct3 d-flex align-items-center justify-content-between"
         >
           <div class="texts">
-            <h2>محصولات اختصاصی<span>.</span></h2>
+            <h2>Industrial products<span>.</span></h2>
             <p>
-              قابلیت محاسبه ، طراحی و ساخت قالب و همچنین مشاوره در خصوص ریخته
-              گری و تولید .
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna
             </p>
             <button class="effectBtn">
-              <span> اطلاعات بیشتر </span>
+              <span> More Info </span>
             </button>
           </div>
-          <img src="/images/faHomeProduct3.png" alt="" />
+          <img src="/images/homeProduct3.png" alt="" />
+        </section>
+        <section
+          class="homeProduct4 d-flex align-items-center justify-content-between"
+        >
+          <div class="texts">
+            <h2>Ingots & billets<span>.</span></h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna
+            </p>
+            <button class="effectBtn">
+              <span> More Info </span>
+            </button>
+          </div>
+          <img src="/images/homeProduct4.png" alt="" />
         </section>
       </div>
 
       <div class="units">
         <div class="unitsHead">
-          <div class="mb-4 d-flex justify-content-between align-items-center">
-            <div>
-              <div class="blueLine"></div>
-              <h3>واحد های تولیدی</h3>
-            </div>
-            <h2 class="mont">.Units Of Our Company</h2>
-          </div>
-          <button class="effectBtn"><span>بیشتر بخوانید</span></button>
+          <h2>Units Of Our Company.</h2>
+          <button class="effectBtn"><span>Read More</span></button>
         </div>
         <div class="items d-flex justify-content-around flex-wrap">
           <div
-            v-for="item in faUnitItems"
+            v-for="item in unitItems"
             :key="item.id"
             class="item"
             :class="{ marginItem: item.id % 2 == 0 }"
             :id="`item${item.id}`"
           >
-            <div v-if="item.id <= 9" class="number mont">0{{ item.id }}.</div>
-            <div v-else class="number mont">{{ item.id }}.</div>
+            <div class="number">0{{ item.id }}.</div>
             <div class="title">{{ item.title }}</div>
             <div class="text">{{ item.text }}</div>
           </div>
@@ -154,21 +155,8 @@
       </div>
       <div class="news">
         <div class="newsHead">
-          <div class="d-flex justify-content-between">
-            <div class="faNew">
-              <div class="d-flex align-items-center mb-4">
-                <h3>اخبار</h3>
-                <div class="blueLine"></div>
-              </div>
-              <p>
-                اخبار مرتبط با صنعت آلومینیوم را با شما به اشتراک می گذاریم.
-              </p>
-            </div>
-            <div class="enNew">
-              <h2 class="mont">.News</h2>
-              <p class="mont">Lorem ipsum dolor sit</p>
-            </div>
-          </div>
+          <h2>News.</h2>
+          <p>We share the news related to the aluminum industry with you</p>
           <div class="button effectBtn">
             <span> All News </span>
           </div>
@@ -176,7 +164,7 @@
         <div class="newsList">
           <div
             class="d-flex justify-content-between new"
-            v-for="item in faNewsItems"
+            v-for="item in newsItems"
             :key="item.id"
             :id="`new${item.id}`"
           >
@@ -186,18 +174,18 @@
                 <h3 class="title">{{ item.title }}</h3>
                 <p class="text">{{ item.text }}</p>
               </div>
-              <div class="number mont">0{{ item.id }}.</div>
+              <div class="number">0{{ item.id }}.</div>
             </div>
           </div>
         </div>
       </div>
-      <Footer lang="fa" />
+      <Footer lang="en" />
     </div>
     <MouseEffect />
   </div>
 </template>
-
-<script>
+  
+  <script>
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 export default {
@@ -329,24 +317,24 @@ export default {
           image: "/images/homeNew1.jpg",
           title: "Lorem ipsum dolor sit",
           text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                ut labore et dolore magna aliqua Egestas purus viverra accumsan in nisl nisi Arcu cursus
-                vitae congue mauris rhoncus aenean vel elit scelerisque ...`,
+                  ut labore et dolore magna aliqua Egestas purus viverra accumsan in nisl nisi Arcu cursus
+                  vitae congue mauris rhoncus aenean vel elit scelerisque ...`,
         },
         {
           id: 2,
           image: "/images/homeNew2.jpg",
           title: "Lorem ipsum dolor sit",
           text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                ut labore et dolore magna aliqua Egestas purus viverra accumsan in nisl nisi Arcu cursus
-                vitae congue mauris rhoncus aenean vel elit scelerisque ...`,
+                  ut labore et dolore magna aliqua Egestas purus viverra accumsan in nisl nisi Arcu cursus
+                  vitae congue mauris rhoncus aenean vel elit scelerisque ...`,
         },
         {
           id: 3,
           image: "/images/homeNew3.jpg",
           title: "Lorem ipsum dolor sit",
           text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                ut labore et dolore magna aliqua Egestas purus viverra accumsan in nisl nisi Arcu cursus
-                vitae congue mauris rhoncus aenean vel elit scelerisque ...`,
+                  ut labore et dolore magna aliqua Egestas purus viverra accumsan in nisl nisi Arcu cursus
+                  vitae congue mauris rhoncus aenean vel elit scelerisque ...`,
         },
       ],
       faNewsItems: [
@@ -435,7 +423,7 @@ export default {
       var dur = 0.5,
         next = 20,
         dur = 14,
-        tt = 3000;
+        tt = 4000;
       var action = gsap
         .timeline({
           defaults: {
@@ -464,6 +452,6 @@ export default {
   },
 };
 </script>
-
-<style>
+  
+  <style>
 </style>

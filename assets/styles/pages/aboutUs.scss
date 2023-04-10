@@ -289,7 +289,7 @@
     }
     .activities {
       img {
-        margin-left: 20px;
+        margin-left: 40px;
       }
       &::before {
         content: "";
@@ -379,6 +379,7 @@
       }
     }
     .certificates {
+      margin-bottom: 200px;
       h2 {
         font-style: normal;
         font-weight: 700;
@@ -409,6 +410,30 @@
       .padd {
         padding: 0px 260px;
       }
+      .splide {
+        padding: 0px 260px;
+        .splide__arrows {
+          display: flex;
+          flex-direction: row-reverse;
+          justify-content: space-between;
+          top: 50%;
+          width: 100vw;
+          position: absolute;
+          right: 0px;
+          padding: 0px 200px;
+          .buttom {
+            background-color: inherit;
+          }
+        }
+        .splide__track {
+          ul {
+            li {
+              display: flex;
+              justify-content: center;
+            }
+          }
+        }
+      }
       .images {
         padding: 0px 230px;
         margin-bottom: 400px;
@@ -420,6 +445,10 @@
         .image {
           width: 23%;
         }
+      }
+
+      .carouselImage {
+        width: 90%;
       }
     }
   }
@@ -449,6 +478,12 @@
         .padd,
         .images {
           padding: 0px 100px;
+        }
+        .splide {
+          padding: 0px 100px;
+          .splide__arrows {
+            padding: 0px 50px;
+          }
         }
       }
     }
@@ -678,7 +713,7 @@
         }
       }
       .certificates {
-        margin-bottom: 0px;
+        margin-bottom: 100px;
         h2,
         h3 {
           font-size: 40px;
@@ -689,6 +724,12 @@
         .padd,
         .images {
           padding: 0px 20px;
+        }
+        .splide {
+          padding: 0px 60px;
+          .splide__arrows {
+            padding: 0px;
+          }
         }
       }
     }

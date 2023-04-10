@@ -37,11 +37,17 @@
         transform: skew(-30deg);
         margin-right: 20px;
         img,
-        div {
+        a {
           transform: skew(30deg);
         }
         img {
           margin-right: 8px;
+        }
+        a {
+          color: white;
+          &:hover {
+            text-decoration: none;
+          }
         }
       }
       .line {
@@ -136,11 +142,17 @@
         transform: skew(-30deg);
         margin-right: 20px;
         img,
-        div {
+        a {
           transform: skew(30deg);
         }
         img {
           margin-right: 8px;
+        }
+        a {
+          color: white;
+          &:hover {
+            text-decoration: none;
+          }
         }
       }
       .line {

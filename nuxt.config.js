@@ -1,6 +1,6 @@
-export default{
+export default {
   ssr: true,
-  target: 'server',
+  target: "server",
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -24,6 +24,7 @@ export default{
   plugins: [
     { src: "~/plugins/aos", mode: "client" },
     { src: "@/plugins/element-ui" },
+    { src: "~/plugins/splide.client", mode: "client" },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -52,7 +53,7 @@ export default{
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     extend(config) {
-      config.resolve.alias['node-fetch-native'] = require.resolve('node-fetch')
-    }
+      config.resolve.alias["node-fetch-native"] = require.resolve("node-fetch");
+    },
   },
 };

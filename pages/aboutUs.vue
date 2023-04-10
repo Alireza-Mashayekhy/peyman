@@ -331,7 +331,7 @@
           شرکت پیمان پروفیل آسیا موفق به دریافت iso ها و پروانه استاندارد ملی
           شده است.
         </p>
-        <div class="d-flex images align-items-center">
+        <!-- <div class="d-flex images align-items-center">
           <img src="/icons/arrowRight.svg" alt="" />
           <div class="d-flex justify-content-between col">
             <img src="/images/certificates1.jpg" class="image" alt="" />
@@ -340,7 +340,41 @@
             <img src="/images/certificates4.jpg" class="image" alt="" />
           </div>
           <img src="/icons/arrowLeft.svg" alt="" />
-        </div>
+        </div> -->
+        <splide :options="options" v-show="computer">
+          <splide-slide>
+            <img src="/images/certificates1.jpg" class="carouselImage" alt="" />
+          </splide-slide>
+          <splide-slide>
+            <img src="/images/certificates2.jpg" class="carouselImage" alt="" />
+          </splide-slide>
+          <splide-slide>
+            <img src="/images/certificates3.jpg" class="carouselImage" alt="" />
+          </splide-slide>
+          <splide-slide>
+            <img src="/images/certificates4.jpg" class="carouselImage" alt="" />
+          </splide-slide>
+          <splide-slide>
+            <img src="/images/certificates5.jpg" class="carouselImage" alt="" />
+          </splide-slide>
+        </splide>
+        <splide :options="options2" v-show="!computer">
+          <splide-slide>
+            <img src="/images/certificates1.jpg" class="carouselImage" alt="" />
+          </splide-slide>
+          <splide-slide>
+            <img src="/images/certificates2.jpg" class="carouselImage" alt="" />
+          </splide-slide>
+          <splide-slide>
+            <img src="/images/certificates3.jpg" class="carouselImage" alt="" />
+          </splide-slide>
+          <splide-slide>
+            <img src="/images/certificates4.jpg" class="carouselImage" alt="" />
+          </splide-slide>
+          <splide-slide>
+            <img src="/images/certificates5.jpg" class="carouselImage" alt="" />
+          </splide-slide>
+        </splide>
       </div>
       <Footer lang="fa" />
     </div>
@@ -353,14 +387,38 @@ export default {
   data() {
     return {
       language: "",
+      computer: true,
+      options: {
+        type: "loop",
+        perPage: 4,
+        perMove: 1,
+      },
+      options2: {
+        type: "loop",
+        perPage: 2,
+        perMove: 1,
+      },
     };
   },
   mounted() {
     this.language = this.$store.state.lang;
+    window.addEventListener("resize", this.onResize);
+    if (document.body.clientWidth > 750) {
+      this.computer = true;
+    } else if (document.body.clientWidth < 750) {
+      this.computer = false;
+    }
   },
   methods: {
     change() {
       this.$store.commit("change");
+    },
+    onResize() {
+      if (document.body.clientWidth > 750) {
+        this.computer = true;
+      } else if (document.body.clientWidth < 750) {
+        this.computer = false;
+      }
     },
   },
   watch: {

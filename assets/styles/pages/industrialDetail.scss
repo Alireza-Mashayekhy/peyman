@@ -133,6 +133,34 @@
         width: 31%;
       }
     }
+    .splide {
+      padding: 0px 260px;
+      margin-top: 200px;
+      .splide__arrows {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        top: 50%;
+        width: 100vw;
+        position: absolute;
+        right: 0px;
+        padding: 0px 200px;
+        .buttom {
+          background-color: inherit;
+        }
+      }
+      .splide__track {
+        ul {
+          li {
+            display: flex;
+            justify-content: center;
+            img {
+              width: 90%;
+            }
+          }
+        }
+      }
+    }
     .footer {
       margin-top: 300px;
     }
@@ -148,6 +176,12 @@
       .diameter,
       .images {
         padding: 0px 100px;
+      }
+      .splide {
+        padding: 0px 100px;
+        .splide__arrows {
+          padding: 0px 50px;
+        }
       }
     }
   }
@@ -224,6 +258,21 @@
         img {
           width: 100%;
           margin-bottom: 50px;
+        }
+      }
+      .splide {
+        padding: 0px 60px;
+        .splide__arrows {
+          padding: 0px;
+        }
+        .splide__track {
+          ul {
+            li {
+              img {
+                width: 100%;
+              }
+            }
+          }
         }
       }
       .footer {

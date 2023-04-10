@@ -66,14 +66,24 @@
           </div>
         </div>
       </div>
-      <div class="images d-flex justify-content-between">
+      <!-- <div class="images d-flex justify-content-between">
         <img
           v-for="i in 3"
           :key="i"
           src="/images/industrialDetail.jpg"
           alt=""
         />
-      </div>
+      </div> -->
+      <splide :options="options" v-show="computer">
+        <splide-slide v-for="i in 3" :key="i">
+          <img src="/images/industrialDetail.jpg" alt="" />
+        </splide-slide>
+      </splide>
+      <splide :options="options2" v-show="!computer">
+        <splide-slide v-for="i in 3" :key="i">
+          <img src="/images/industrialDetail.jpg" alt="" />
+        </splide-slide>
+      </splide>
       <div class="footer">
         <Footer lang="fa" />
       </div>
@@ -87,15 +97,39 @@ export default {
   data() {
     return {
       language: "",
+      computer: true,
       items: [4, 6, 7, 8, 9, 10, 11, 12, 14, 15, 16, 18, 20, 22],
+      options: {
+        type: "loop",
+        perPage: 3,
+        perMove: 1,
+      },
+      options2: {
+        type: "loop",
+        perPage: 1,
+        perMove: 1,
+      },
     };
   },
   mounted() {
     this.language = this.$store.state.lang;
+    window.addEventListener("resize", this.onResize);
+    if (document.body.clientWidth > 750) {
+      this.computer = true;
+    } else if (document.body.clientWidth < 750) {
+      this.computer = false;
+    }
   },
   methods: {
     change() {
       this.$store.commit("change");
+    },
+    onResize() {
+      if (document.body.clientWidth > 750) {
+        this.computer = true;
+      } else if (document.body.clientWidth < 750) {
+        this.computer = false;
+      }
     },
   },
   watch: {

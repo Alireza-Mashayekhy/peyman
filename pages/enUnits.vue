@@ -1,53 +1,45 @@
 <template>
   <div class="units">
-    <div class="faUnits irancell">
-      <Header lang="fa" @change="change" />
+    <div class="enUnits mont">
+      <Header lang="eng" @change="change" />
       <div class="topDiv">
-        <h3 class="mont">Units</h3>
-        <h1>واحدهای تولیدی</h1>
+        <h3>Units</h3>
+        <h1>Units OF Our Company.</h1>
         <p>
-          لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده
-          از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و
-          سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua Egestas
+          purus viverra accumsan in nisl nisi Arcu cursus.
         </p>
       </div>
-      <div class="scroll d-flex justify-content-end align-items-center">
-        <div class="scrollIcon">
-          <span class="scrollCircle"></span>
-        </div>
-        <span class="scrollTitle">Scroll Down</span>
-      </div>
+
       <div class="lineDiv">
         <Lines myVw="1920" myVh="360" />
       </div>
       <div class="myUnits">
         <section
-          v-for="unit in faUnits"
+          v-for="unit in units"
           :key="unit.id"
           class="d-flex justify-content-between unit align-items-center"
           :id="unit.idName"
           :class="{ whiteBack: unit.id % 2 == 0 }"
         >
           <div>
-            <h2>
-              <div>واحد</div>
-              <div>{{ unit.title }}</div>
-            </h2>
+            <h2>{{ unit.title }}</h2>
             <p>{{ unit.text }}</p>
-            <router-link to="/" v-if="unit.more">بیشتر ...</router-link>
+            <router-link to="/" v-if="unit.more">More ...</router-link>
           </div>
           <img :src="unit.image" alt="" />
         </section>
       </div>
       <div class="unitFooter">
-        <Footer lang="fa" />
+        <Footer lang="en" />
       </div>
     </div>
     <MouseEffect />
   </div>
 </template>
-
-<script>
+  
+  <script>
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 export default {
@@ -281,6 +273,6 @@ export default {
   },
 };
 </script>
-
-<style>
+  
+  <style>
 </style>
