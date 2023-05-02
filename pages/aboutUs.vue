@@ -233,7 +233,7 @@
         </div>
         <img src="/images/capabilities.jpg" alt="" />
       </div>
-      <div class="activities d-flex justify-content-between align-items-start">
+      <div class="activities d-flex align-items-start">
         <img src="/images/activities.jpg" alt="" />
         <div>
           <h2>توانمندی های ما</h2>

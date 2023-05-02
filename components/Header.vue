@@ -10,16 +10,16 @@
       <img src="/images/whiteLogo.png" class="whiteLogo" />
       <div class="d-flex">
         <div class="d-flex links">
-          <router-link to="/" :class="{ active: page == 1 }">
+          <router-link to="/enHome" :class="{ active: page == 1 }">
             Home
           </router-link>
           <router-link to="/aboutUs" :class="{ active: page == 2 }">
             Who We Are
           </router-link>
-          <router-link to="/products" :class="{ active: page == 3 }">
+          <router-link to="/enProducts" :class="{ active: page == 3 }">
             Products
           </router-link>
-          <router-link to="/units" :class="{ active: page == 4 }">
+          <router-link to="/enUnits" :class="{ active: page == 4 }">
             Units
           </router-link>
           <router-link to="/media" :class="{ active: page == 5 }">
@@ -104,14 +104,16 @@
     <div class="menu" v-if="lang == 'eng'">
       <div v-if="menu" class="d-flex flex-column align-items-end">
         <img src="/icons/X.svg" class="XIcon" @click="hideMenu" alt="" />
-        <router-link to="/" :class="{ active: page == 1 }"> Home </router-link>
+        <router-link to="/enHome" :class="{ active: page == 1 }">
+          Home
+        </router-link>
         <router-link to="/aboutUs" :class="{ active: page == 2 }">
           Who We Are
         </router-link>
-        <router-link to="/products" :class="{ active: page == 3 }">
+        <router-link to="/enProducts" :class="{ active: page == 3 }">
           Products
         </router-link>
-        <router-link to="/units" :class="{ active: page == 4 }">
+        <router-link to="/enUnits" :class="{ active: page == 4 }">
           Units
         </router-link>
         <router-link to="/media" :class="{ active: page == 5 }">
@@ -200,6 +202,12 @@ export default {
       } else if (this.$route.path == "/enHome") {
         this.$router.push("/");
         this.$emit("change");
+      } else if (this.$route.path == "/products") {
+        this.$router.push("enProducts");
+        this.$emit("change");
+      } else if (this.$route.path == "/enProducts") {
+        this.$router.push("products");
+        this.$emit("change");
       } else {
         this.$emit("change");
       }
@@ -210,16 +218,10 @@ export default {
           "rgba(0, 0, 0, 0)";
         document
           .getElementsByClassName("header")[0]
-          .getElementsByClassName("whiteLogo")[0].style.height = "117px";
-        document
-          .getElementsByClassName("header")[0]
-          .getElementsByClassName("whiteLogo")[0].style.width = "135px";
+          .getElementsByClassName("whiteLogo")[0].style.width = "100px";
       } else {
         document.getElementsByClassName("header")[0].style.backgroundColor =
           "rgba(0, 0, 0, 0.5)";
-        document
-          .getElementsByClassName("header")[0]
-          .getElementsByClassName("whiteLogo")[0].style.height = "60px";
         document
           .getElementsByClassName("header")[0]
           .getElementsByClassName("whiteLogo")[0].style.width = "70px";
@@ -268,25 +270,22 @@ export default {
         "rgba(0, 0, 0, 0)";
       document
         .getElementsByClassName("header")[0]
-        .getElementsByClassName("whiteLogo")[0].style.height = "117px";
-      document
-        .getElementsByClassName("header")[0]
-        .getElementsByClassName("whiteLogo")[0].style.width = "135px";
+        .getElementsByClassName("whiteLogo")[0].style.width = "100px";
     } else {
       document.getElementsByClassName("header")[0].style.backgroundColor =
         "rgba(0, 0, 0, 0.5)";
       document
         .getElementsByClassName("header")[0]
-        .getElementsByClassName("whiteLogo")[0].style.height = "60px";
-      document
-        .getElementsByClassName("header")[0]
         .getElementsByClassName("whiteLogo")[0].style.width = "70px";
     }
-    if (this.$route.path == "/") {
+    if (this.$route.path == "/" || this.$route.path == "/enHome") {
       this.page = 1;
     } else if (this.$route.path == "/aboutUs") {
       this.page = 2;
-    } else if (this.$route.path == "/products") {
+    } else if (
+      this.$route.path == "/products" ||
+      this.$route.path == "/enProducts"
+    ) {
       this.page = 3;
     } else if (this.$route.path == "/exclusive") {
       this.page = 3;
@@ -294,7 +293,7 @@ export default {
       this.page = 3;
     } else if (this.$route.path == "/construction") {
       this.page = 3;
-    } else if (this.$route.path == "/units") {
+    } else if (this.$route.path == "/units" || this.$route.path == "/enUnits") {
       this.page = 4;
     } else if (this.$route.path == "/media") {
       this.page = 5;

@@ -91,9 +91,17 @@
         filter: blur(200px);
       }
     }
+    section {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      background: #0c0f1c;
+    }
     .item1,
     .item2 {
       margin-top: 140px;
+      height: 100%;
+      width: 100%;
       .titleAndText {
         padding-right: 25px;
         border-right: 4px solid #0094ff;

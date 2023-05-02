@@ -24,38 +24,41 @@
       <div class="lineDiv">
         <Lines myVw="1920" myVh="100" />
       </div>
-      <div v-for="item in industrial" :key="item.id">
-        <div
-          v-if="item.id % 2 != 0"
-          class="item1 d-flex justify-content-between align-items-center"
-        >
-          <div>
-            <div class="titleAndText">
-              <h5 class="title">{{ item.title }}</h5>
-              <p class="text">{{ item.text }}</p>
+      <div class="myUnits">
+        <section v-for="item in industrial" :key="item.id">
+          <div
+            v-if="item.id % 2 != 0"
+            class="item1 d-flex justify-content-between align-items-center"
+          >
+            <div>
+              <div class="titleAndText">
+                <h5 class="title">{{ item.title }}</h5>
+                <p class="text">{{ item.text }}</p>
+              </div>
+              <router-link to="industrial/1" class="effectBtn">
+                <span>مشاهده</span>
+              </router-link>
             </div>
-            <router-link to="industrial/1" class="effectBtn">
-              <span>مشاهده</span>
-            </router-link>
+            <img :src="item.image" alt="" />
           </div>
-          <img :src="item.image" alt="" />
-        </div>
-        <div
-          v-else
-          class="item2 d-flex justify-content-between align-items-center"
-        >
-          <img :src="item.image" alt="" />
-          <div>
-            <div class="titleAndText">
-              <h5 class="title">{{ item.title }}</h5>
-              <p class="text">{{ item.text }}</p>
+          <div
+            v-else
+            class="item2 d-flex justify-content-between align-items-center"
+          >
+            <img :src="item.image" alt="" />
+            <div>
+              <div class="titleAndText">
+                <h5 class="title">{{ item.title }}</h5>
+                <p class="text">{{ item.text }}</p>
+              </div>
+              <router-link to="industrial/1" class="effectBtn">
+                <span>مشاهده</span>
+              </router-link>
             </div>
-            <router-link to="industrial/1" class="effectBtn">
-              <span>مشاهده</span>
-            </router-link>
           </div>
-        </div>
+        </section>
       </div>
+
       <div class="footer">
         <Footer lang="fa" />
       </div>
@@ -64,7 +67,9 @@
   </div>
 </template>
       
-      <script>
+<script>
+import gsap from "gsap";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
 export default {
   data() {
     return {
@@ -99,10 +104,44 @@ export default {
   },
   mounted() {
     this.language = this.$store.state.lang;
+    this.unitAnimation();
   },
   methods: {
     change() {
       this.$store.commit("change");
+    },
+    unitAnimation() {
+      gsap.registerPlugin(ScrollTrigger);
+
+      gsap.set(".myUnits", { autoAlpha: 1 });
+
+      var allSections = gsap.utils.toArray("section");
+      var allSectionsNotFirst = allSections.slice(1);
+      gsap.set(allSectionsNotFirst, { position: "absolute" });
+
+      var dur = 0.5,
+        next = 20,
+        dur = 14,
+        tt = 3000;
+      var action = gsap
+        .timeline({
+          defaults: {
+            duration: dur,
+            ease: "none",
+            stagger: next,
+          },
+        })
+        .to(allSectionsNotFirst, { yPercent: -100 })
+        .to({}, { duration: 1 });
+
+      ScrollTrigger.create({
+        trigger: ".myUnits",
+        start: "top top",
+        end: "+=" + tt,
+        pin: true,
+        animation: action,
+        scrub: 0.3,
+      });
     },
   },
   watch: {
