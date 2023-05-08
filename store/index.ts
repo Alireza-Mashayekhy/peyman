@@ -12,9 +12,9 @@ export const mutations = {
     }
   },
   mouseEffectOn(state:any ){
-      state.mouseEffect = true;
+    state.mouseEffect = true;
   },
   mouseEffectOff(state:any ){
     state.mouseEffect = false;
-}
+  },
 }

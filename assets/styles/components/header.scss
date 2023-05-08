@@ -4,10 +4,13 @@
   position: fixed !important;
   background-color: rgba(0, 0, 0, 0);
   transition: background 1s;
+  max-width: 100vw;
   .enHeader {
     color: white;
     padding: 50px 260px;
     padding-bottom: 10px;
+    max-width: 100vw;
+
     * {
       z-index: 9 !important;
       position: relative;
@@ -50,6 +53,9 @@
       width: 24px;
       height: 24px;
     }
+    .lastHeadResponse {
+      display: none;
+    }
   }
   .faHeader {
     color: white;
@@ -57,13 +63,14 @@
     direction: rtl;
     max-height: 217px;
     padding-bottom: 10px;
+    max-width: 100vw;
 
     * {
       z-index: 8 !important;
     }
     .whiteLogo {
       width: 100px;
-      height: auto;
+      height: 87px;
       transition: all 1s;
       position: relative;
       bottom: 10px;
@@ -143,13 +150,16 @@
         height: 24px;
       }
     }
+    .lastHeadResponse {
+      display: none;
+    }
   }
   .menu {
     height: 100vh;
     background: rgba(0, 0, 0, 0.8);
     width: fit-content;
     position: fixed;
-    left: 0;
+    left: -330px;
     top: 0;
     padding: 50px 0px;
     transition: all 1s;
@@ -221,12 +231,13 @@
     background: rgba(0, 0, 0, 0.8);
     width: fit-content;
     position: fixed;
-    right: 0;
+    right: -330px;
     top: 0;
     padding: 50px 0px;
     transition: all 1s;
-    transform: translateX(303px);
     display: none;
+    transform: translateX(0px);
+    z-index: 9;
     .XIcon {
       width: 30px;
       margin-right: 20px;
@@ -263,6 +274,8 @@
       display: none;
       flex-direction: column;
       width: fit-content;
+      opacity: 0;
+      transition: all 1s;
       a {
         width: 330px;
       }
@@ -332,36 +345,75 @@
 }
 @media only screen and (max-width: 750px) {
   .header {
+    position: relative;
     .enHeader {
       padding: 20px;
       // .barsIcon {
       //   width: 18px;
       // }
+      .barsIcon {
+        padding: 0px;
+        margin-right: 20px;
+      }
       .whiteLogo {
         width: 70px;
         height: auto;
       }
+      .lastDiv {
+        display: none !important;
+      }
+      .lastHeadResponse {
+        display: block;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+        height: 25px;
+        transition: all 1s;
+        .effect {
+          transition: all 1s;
+          gap: 10px;
+          margin-top: 10px;
+          background-color: #003f6e;
+          padding: 10px;
+          border-radius: 25px;
+          .searchIcon {
+            margin: 0px;
+          }
+        }
+        .arrow {
+          transition: all 1s;
+        }
+      }
     }
     .faHeader {
       padding: 20px;
-
+      overflow: visible;
       .whiteLogo {
         width: 70px;
         height: 70px;
       }
       .lastHeadDiv {
+        display: none !important;
+      }
+      .lastHeadResponse {
+        display: block;
+        display: flex;
         flex-direction: column;
-        .blueLine {
-          display: none;
+        align-items: center;
+        overflow: hidden;
+        height: 25px;
+        transition: all 1s;
+        .effect {
+          transition: all 1s;
+          gap: 10px;
+          margin-top: 10px;
+          background-color: #003f6e;
+          padding: 10px;
+          border-radius: 25px;
         }
-        .globalIcon,
-        .bagIcon,
-        .searchIcon {
-          margin-right: 0px;
-          width: 15px;
-        }
-        .globalDiv {
-          margin: 10px 0px;
+        .arrow {
+          transition: all 1s;
         }
       }
       .barsIcon {

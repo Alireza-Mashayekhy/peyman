@@ -5,15 +5,17 @@
       <div class="topDiv">
         <h3 class="mont">Peyman Profile Asia Co</h3>
         <h1>تولید کننده محصولات آلومینیومی با پیشرفته ترین تجهیزات</h1>
-        <button class="effectBtn">
-          <img src="/icons/blackCall.svg" class="blackCallIcon" />
-          <span>تماس با ما</span>
-        </button>
-        <div class="scroll d-flex justify-content-end align-items-center">
-          <div class="scrollIcon">
-            <span class="scrollCircle"></span>
+        <div class="d-flex justify-content-between">
+          <button class="effectBtn">
+            <img src="/icons/blackCall.svg" class="blackCallIcon" />
+            <span>تماس با ما</span>
+          </button>
+          <div class="scroll d-flex justify-content-end align-items-center">
+            <div class="scrollIcon">
+              <span class="scrollCircle"></span>
+            </div>
+            <span class="scrollTitle">Scroll Down</span>
           </div>
-          <span class="scrollTitle">Scroll Down</span>
         </div>
       </div>
       <div class="whoWeAre d-flex justify-content-between align-items-center">
