@@ -182,7 +182,12 @@
             :key="item.id"
             :id="`new${item.id}`"
           >
-            <img :src="item.image" alt="" data-aos="zoom-in" />
+            <img
+              :src="item.image"
+              alt=""
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+            />
             <div class="d-flex flex-column justify-content-between">
               <div class="titleAndText">
                 <h3 class="title">{{ item.title }}</h3>
@@ -379,8 +384,7 @@ export default {
     setTimeout(() => {
       this.unitAnimation();
       gsap.registerPlugin(ScrollTrigger);
-      let tl = gsap.timeline();
-      tl.to("#trigger", {
+      const tl = gsap.timeline({
         scrollTrigger: {
           trigger: ".animationImage",
           start: "50% center",
@@ -388,10 +392,21 @@ export default {
           scrub: true,
           // markers: true,
         },
-        scale: 3,
-        top: 50,
-        // transform: "translateY(650px)",
       });
+      tl.to(".animationImage", {
+        position: "fixed",
+        top: "0px",
+        duration: 0.1,
+      });
+      tl.to("#trigger", { scale: 3, top: 50, duration: 10 });
+      tl.to(".animationImage", { position: "fixed", duration: 10 });
+      tl.to(".animationImage", { position: "relative", duration: 0.05 });
+      tl.to(".video", { top: "750px", duration: 0.05 });
+      if (window.innerWidth > 750) {
+        tl.to(".news", { marginTop: "1000px", duration: 0.05 });
+      } else if (window.innerWidth < 750) {
+        tl.to(".news", { marginTop: "800px", duration: 0.05 });
+      }
     }, 10);
     window.addEventListener("scroll", () => {
       if (
@@ -404,19 +419,6 @@ export default {
         this.video
       ) {
         this.video = false;
-      }
-      var top = parseInt(
-        document.getElementById("trigger").style.top.split("px")[0]
-      );
-      if (top > 0 && top < 50) {
-        document.getElementsByClassName("animationImage")[0].style.position =
-          "fixed";
-        document.getElementsByClassName("animationImage")[0].style.top = "0px";
-        document.getElementsByClassName("news")[0].style.marginTop = "1600px";
-      } else if (top == 50 || top == 0) {
-        document.getElementsByClassName("animationImage")[0].style.position =
-          "relative";
-        document.getElementsByClassName("news")[0].style.marginTop = "900px";
       }
     });
   },

@@ -326,6 +326,9 @@
     }
     .faHeader {
       padding: 50px 100px;
+      a {
+        margin-left: 0px;
+      }
       .links {
         display: none !important;
       }
@@ -380,6 +383,9 @@
           .searchIcon {
             margin: 0px;
           }
+          a {
+            margin-left: 0px;
+          }
         }
         .arrow {
           transition: all 1s;
@@ -411,6 +417,9 @@
           background-color: #003f6e;
           padding: 10px;
           border-radius: 25px;
+          a {
+            margin: 0px;
+          }
         }
         .arrow {
           transition: all 1s;
