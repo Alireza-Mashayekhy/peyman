@@ -170,7 +170,12 @@
             :key="item.id"
             :id="`new${item.id}`"
           >
-            <img :src="item.image" alt="" data-aos="zoom-in" />
+            <img
+              :src="item.image"
+              alt=""
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+            />
             <div class="d-flex flex-column justify-content-between">
               <div class="titleAndText">
                 <h3 class="title">{{ item.title }}</h3>
